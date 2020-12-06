@@ -1,7 +1,131 @@
 // Place all the styles related to the CurriculumVitae controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+$accent: #3a5393;
 
-h1 {
-  text-align: center;
+#sideNav {
+  background-color: #2f2f8d;
+  right: 0;
+  .navbar-nav .nav-item .nav-link {
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+  .navbar-collapse li {
+    height: 28px;
+  }
+  .navbar-toggler:focus {
+    outline: none;
+  }
 }
+.social-icons {
+  .social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: gray;
+    color: #fff;
+    border-radius: 100%;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      background-color: $accent;
+    }
+  }
+}
+
+.resume-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 4rem;
+  max-width: 75rem;
+  .resume-section-content {
+    width: 100%;
+  }
+}
+
+#about {
+  span {
+    color: $accent;
+  }
+}
+
+@media (min-width: 576px) {
+  #sideNav {
+    .navbar-brand {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #sideNav {
+    .navbar-brand {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: 960px) {
+  #sideNav {
+    text-align: center;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    height: 100vh;
+    .navbar-brand {
+      font-size: 20px;
+      display: flex;
+      margin: auto auto 0;
+      padding: 0.5rem;
+      .img-profile {
+        max-width: 10rem;
+        max-height: 10rem;
+        border: 0.5rem solid fade-out(#7fffd4, 0.6);
+      }
+    }
+    .navbar-collapse {
+      display: flex;
+      align-items: flex-start;
+      flex-grow: 0;
+      width: 100%;
+      margin-bottom: auto;
+      .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+        .nav-item {
+          height: 40px;
+          display: block;
+          .nav-link {
+            font-size: 16px;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  .resume-section {
+    .resume-section-content {
+      padding-right: 17rem;
+    }
+  }
+}
+
+//xl
+//@media (min-width: 1200px) {
+//  aside {
+//    .photo img {
+//      height: 130px;
+//      width: 130px;
+//    }
+//    padding-left: 100px;
+//  }
+//}
